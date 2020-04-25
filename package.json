@@ -1,0 +1,23 @@
+{
+  "name": "music-database",
+  "version": "1.0.0",
+  "description": "Music Database for practice with pg-promise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turnermillsaps/music-database.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/turnermillsaps/music-database/issues"
+  },
+  "homepage": "https://github.com/turnermillsaps/music-database#readme",
+  "dependencies": {
+    "pg-promise": "^10.5.2"
+  }
+}
