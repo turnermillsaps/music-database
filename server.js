@@ -44,9 +44,12 @@ let insertTrack = (trackName, albumID, duration) => {
     db.query(songSQL, [trackName, duration])
         .then((res) => {
             console.log(res);
+            return res.rows[0].id;
+        })
+        .then((id) => {
+            // Execute remainder of SQL statements on this chain
         })
     
-    // Remainder of inserts go here based on return value of res
 }
 
 // Function to promt user for a new artist
