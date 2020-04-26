@@ -1,6 +1,7 @@
 const pgp = require('pg-promise')();
 const prompt = require('prompt-promise');
-const db = pgp(config);
+const dbConfig = require('./config');
+const db = pgp(dbConfig.config);
 
 // Function to insert a new artist
 let insertArtist = (artistName) => {
@@ -17,7 +18,7 @@ let insertArtist = (artistName) => {
 }
 
 // Function to promt user for a new artist
-let newArtist = () => {
+module.exports = newArtist = () => {
     prompt('Artist name?')
         .then((val) => {
             return insertArtist(val);

@@ -1,6 +1,7 @@
 const pgp = require('pg-promise')();
 const prompt = require('prompt-promise');
-const db = pgp(config);
+const dbConfig = require('./config');
+const db = pgp(dbConfig.config);
 
 // Insert a new album into the database
 let insertAlbum = (album, albumYear, artistID) => {
@@ -14,7 +15,7 @@ let insertAlbum = (album, albumYear, artistID) => {
 }
 
 // Prompt user for specific data to enter into the music database
-let newAlbum = () => {
+module.exports = newAlbum = () => {
     let album, albumYear, artistID;
     prompt('Album name?')
         .then((val) => {

@@ -1,8 +1,9 @@
 const pgp = require('pg-promise')();
 const prompt = require('prompt-promise');
-const db = pgp(config);
+const dbConfig = require('./config');
+const db = pgp(dbConfig.config);
 
-let newTrack = () => {
+module.exports = newTrack = () => {
     let trackName, albumID, duration;
     prompt('Track name? ')
         .then((val) => {
