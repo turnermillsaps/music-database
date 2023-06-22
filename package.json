@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/turnermillsaps/music-database#readme",
   "dependencies": {
-    "pg-promise": "^10.5.2",
+    "pg-promise": "^10.15.4",
     "prompt-promise": "^1.0.3"
   }
 }
